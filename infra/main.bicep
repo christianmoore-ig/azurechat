@@ -51,7 +51,7 @@ param storageServiceImageContainerName string = 'images'
 param resourceGroupName string = ''
 
 var resourceToken = toLower(uniqueString(subscription().id, name, location))
-var tags = { 'azd-env-name': name }
+var tags = { 'azd-env-name': name, 'CostCenter': "Capstone" }
 
 // Organize resources in a resource group
 resource rg 'Microsoft.Resources/resourceGroups@2021-04-01' = {
